@@ -8,11 +8,12 @@ _         = require 'lodash'
 {p, a, span, div, input, img} = React.DOM
 
 
+elements    = [ {}, 'div', 'p', 'a', 'span', 'input' ]
 R           = React.DOM
-CtFactory   = _.reduce [ {}, 'div', 'p', 'a', 'span' ], (sum, item) ->
+CtFactory   = _.reduce elements, (sum, item) ->
   sum[item] = (className) ->
     ->
-      className = [className, @props.className ? '' ].join ' '
+      className = [className, @props.className ? '' ].join ''
       props     = _.extend {}, @props, className: className
       R[item].apply R[item], [ props ].concat @props.children
   sum

@@ -7,5 +7,10 @@ components =
   link:         'a'
   linkSpan:     'a'
   redSpan:      'span'
+  tracker:      'div'
+  cell:         'input'
+  cellFilled:   'input'
+  button:       'input'
+  nullButton:   'input'
 
 module.exports = components

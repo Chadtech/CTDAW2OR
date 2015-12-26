@@ -52,7 +52,7 @@ gulp.task 'watch', ->
 # gulp.task 'server', (cb) ->
 #   require './server'
 
-gulp.task 'default', ['coffee', 'watch']
+gulp.task 'default', ['coffee', 'stylus', 'watch']
 
 
 
