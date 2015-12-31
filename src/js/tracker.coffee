@@ -27,10 +27,6 @@ DropRight = require './dropright'
 
 TrackerClass = React.createClass
 
-  propTypes:
-    test: PropTypes.string.isRequired
-    sheet: PropTypes.object.isRequired
-
   getInitialState: ->
     sheet:    (require './blank-sheet')()
     position: [ 0, 0 ]  
@@ -43,7 +39,7 @@ TrackerClass = React.createClass
 
   render: -> 
 
-    sheet = @props.store.sheet
+    sheet = @state.sheet
 
     columnNumbers = _.map sheet[0], (c, ci) =>
       column null,

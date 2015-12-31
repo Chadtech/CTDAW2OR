@@ -3,10 +3,6 @@ jade          = require 'gulp-jade'
 stylus        = require 'gulp-stylus'
 coffee        = require 'gulp-coffee'
 autowatch     = require 'gulp-autowatch'
-# concatenate   = require 'gulp-concat'
-# childProcess  = require 'child_process'
-# _             = require 'lodash'
-autowatch     = require 'gulp-autowatch'
 source        = require 'vinyl-source-stream'
 buffer        = require 'vinyl-buffer'
 coffeeify     = require 'coffeeify'
@@ -32,11 +28,6 @@ gulp.task 'coffee', ->
   .pipe source 'app.js'
   .pipe buffer()
   .pipe gulp.dest paths.public
-
-# gulp.task 'jade', ->
-#   gulp.src paths.jade
-#   .pipe jade()
-#   .pipe gulp.dest paths.public
 
 gulp.task 'stylus', ->
   gulp.src paths.stylus
